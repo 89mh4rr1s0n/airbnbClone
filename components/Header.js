@@ -62,6 +62,7 @@ const Header = ({ placeholder }) => {
                     h-10 w-10 min-h-10 min-w-10 flex-shrink-0 cursor-pointer'>
                         <Image
                         src='/airbnb-1.svg'
+                        alt=""
                         layout='fill'
                         objectFit='contain'
                         objectPosition="left"

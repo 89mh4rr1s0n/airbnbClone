@@ -8,11 +8,13 @@ function Banner() {
             <Image src="/interer-stil-dizayn-1396.jpg"
             layout='fill'
             objectFit='cover'
+            alt=""
+            priority
             />
             <div className='absolute top-1/2 w-full text-center'>
                 <p className='text-xl font-semibold text-white'>Not sure where to go? Perfect.</p>
-                <button className='bg-white px-4 py-2 rounded-full shadow-lg
-                my-1 hover:shadow-xl active:scale-90 transition duration-100'>I'm flexible</button>
+                <button 
+                className='bg-white px-4 py-2 rounded-full shadow-lg my-1 hover:shadow-xl active:scale-90 transition duration-100'>I'm flexible</button>
             </div>
         </div>
     </>

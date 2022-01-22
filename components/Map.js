@@ -56,8 +56,10 @@ const Map = ({searchResults}) => {
                         >
                             <div className='relative h-[150px] w-[235px] rounded-2xl'>
                                 <div className='absolute h-full w-full bg-gradient-to-b from-transparent to-gray-600 z-30 rounded-2xl'></div>
-                                <Image className='rounded-2xl'
+                                <Image 
+                                className='rounded-2xl'
                                 src={result.img}
+                                alt=""
                                 layout='fill'
                                 objectFit='cover'
                                 />

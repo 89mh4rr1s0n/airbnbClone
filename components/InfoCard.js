@@ -10,6 +10,7 @@ const InfoCard = (props) => {
             <div className='relative h-24 w-40 sm:h-36 sm:w-60 flex-shrink-0 border-top'>
                 <Image
                 className='rounded-2xl'
+                alt=""
                 src={props.img}
                 layout='fill'
                 objectFit='cover'
