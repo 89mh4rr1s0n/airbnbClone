@@ -1,3 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .button {
+    @apply px-4 py-2 border cursor-pointer
+    rounded-full hover:shadow-xl active:scale-95 m-3 active:bg-gray-200
+    transition transform duration-100 ease-out;
+  }
+}
+
 html,
 body {
   padding: 0;
@@ -13,4 +25,31 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.mapboxgl-popup-content {
+  padding: 0% !important;
+   background-color: transparent !important; 
+  border-radius: 10px;
+  z-index: 50;
+}
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+  border-top-color: #4b5563 !important;
+}
+
+.mapboxgl-popup-close-button {
+  background-color: rgb(255, 56, 92) !important;
+  z-index: 50;
+  margin: 0px auto !important;
+  padding: 0px 5px;
+  border-bottom-left-radius: 6px !important;
+  border-top-right-radius: 10px !important;
+  height: 20px;
+  font-size: 14px !important;
+  color: white;
+}
+
+.mapboxgl-popup-tip {
+  color: #4b5563 !important;
 }
