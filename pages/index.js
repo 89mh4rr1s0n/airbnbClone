@@ -5,8 +5,9 @@ import SmallCard from '../components/SmallCard'
 import MediumCard from '../components/MediumCard'
 import LargeCard from '../components/LargeCard'
 import Footer from '../components/Footer'
+import { liveAnywhere } from '../data'
 
-export default function Home({ exploreData, liveAnywhereData }) {
+export default function Home({ exploreData, /*liveAnywhereData*/ }) {
   return (
     <div>
       <Head>
@@ -38,7 +39,7 @@ export default function Home({ exploreData, liveAnywhereData }) {
       <section>
         <h2 className='text-4xl font-semibold py-8'>Live Anywhere</h2>
         <div className='flex space-x-3 overflow-scroll scrollbar-hide pb-5'>
-          {liveAnywhereData?.map((la, i) => (
+          {liveAnywhere?.map((la, i) => (
             <MediumCard 
             key={i}
             title={la.title}
@@ -64,21 +65,17 @@ export default function Home({ exploreData, liveAnywhereData }) {
 }
 
 export async function getStaticProps() {
-  const exploreData = await fetch('https://links.papareact.com/pyp').
-  then(
-    (res) => res.json()
-  )
+  const explore = await fetch('https://www.jsonkeeper.com/b/4G1G')
+  console.log(explore)
+  const exploreData = await explore.json()
 
-  const liveAnywhereData = await fetch('https://jsonkeeper.com/b/VHHT').
-  then(
-    (res) => res.json()
-  )
-
+  // const liveAnywhere = await fetch('https://jsonkeeper.com/b/VHHT')
+  // const liveAnywhereData = await liveAnywhere.json()
 
   return {
     props: {
       exploreData,
-      liveAnywhereData
+      // liveAnywhereData
     },
   }
 }

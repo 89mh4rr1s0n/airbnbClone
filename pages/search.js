@@ -14,10 +14,6 @@ const Search = ({ searchResults }) => {
     const formattedEndDate = format(new Date(endDate), "dd MMMM yyyy");
     const range = `${formattedStartDate} - ${formattedEndDate}`;
 
-    //console.log(router.query)
-    //console.log(location)
-    //console.log(searchResults)
-
     return (
         <div>
             <Header placeholder={`${location} | ${range} | ${guests} guests`}/>
@@ -63,7 +59,7 @@ const Search = ({ searchResults }) => {
 export default Search;
 
 export const getServerSideProps = async () => {
-    const searchResults = await fetch("https://links.papareact.com/isz").
+    const searchResults = await fetch("https://www.jsonkeeper.com/b/5NPS").
     then(
         (res) => res.json()
     );
